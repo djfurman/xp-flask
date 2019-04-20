@@ -1,0 +1,38 @@
+<!-- base.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css.map">
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <a href="/" class="navbar-item">Home</a>
+                <a href="/about" class="navbar-item">About</a>
+                <a href="http://flask.pocoo.org" class="navbar-item">More About Flask</a>
+            </div>
+        </nav>
+
+
+        <section class="section">
+            <div class="container">
+                {% block body %}
+                {% endblock %}
+            </div> <!-- section container -->
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="content has-text-centered">© 2019 Daniel Furman</div>
+            </div> <!-- Footer container -->
+        </footer>
+    </body>
+</html>
