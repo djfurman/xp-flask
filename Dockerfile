@@ -9,5 +9,5 @@ WORKDIR /api
 # Install Dependencies
 RUN pip install -r requirements.txt
 
-CMD ["gunicorn", "-b", "0.0.0.0:8000", "wsgi:application", "--worker-connections", "15"]
+CMD ["gunicorn", "-b", "0.0.0.0:8000", "wsgi:application", "--worker-connections", "9"]
 EXPOSE 8000
